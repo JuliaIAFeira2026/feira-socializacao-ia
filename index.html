@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1769ff">
+<title>A Socialização na Era da IA — Feira de Ciências</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f4f7fb;--blue:#1769ff;--violet:#6c42ff;--cyan:#00b8d9;--ink:#14213d;--muted:#64748b;--card:#fff;--line:#dce5f2}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}body{margin:0;background:#f4f7fb;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{touch-action:manipulation; -webkit-appearance:none; appearance:none}input[type="radio"]{flex:0 0 auto; min-width:18px; min-height:18px}label.option{touch-action:manipulation; user-select:none; -webkit-user-select:none}.app{min-height:100vh;background:radial-gradient(circle at 15% 0%,#dff5ff 0,transparent 30%),radial-gradient(circle at 90% 10%,#eee4ff 0,transparent 32%),#f4f7fb;padding:18px}.wrap{max-width:980px;margin:auto}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:#53627a;font-size:13px}.brand{font-weight:800;color:#19305b}.badge-fair{padding:7px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:700}
+.hero{position:relative;overflow:hidden;border-radius:30px;padding:34px;color:#fff;background:linear-gradient(135deg,#102a63 0%,#1769ff 50%,#6c42ff 100%);box-shadow:0 18px 45px #244b9c26}.hero:after{content:'AI';position:absolute;right:-10px;bottom:-45px;font-size:180px;font-weight:900;opacity:.08}.eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-weight:800;font-size:12px;opacity:.85}.hero h1{font-size:clamp(28px,6vw,52px);line-height:1.02;margin:9px 0}.hero p{font-size:17px;max-width:650px;margin:0;line-height:1.5}.hero .goal{margin-top:20px;display:inline-block;background:#ffffff1c;border:1px solid #ffffff38;padding:10px 14px;border-radius:14px;font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:23px;margin:16px 0;box-shadow:0 9px 28px #19315b0d}.welcome{text-align:center;padding:32px}.welcome .icon{font-size:50px}.welcome h2{font-size:28px;margin:10px 0}.welcome p{color:var(--muted);max-width:650px;margin:0 auto 22px;line-height:1.55}.btn{border:0;border-radius:14px;padding:15px 20px;background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;font-weight:800;font-size:16px;cursor:pointer;box-shadow:0 8px 20px #1769ff29}.btn:hover{transform:translateY(-1px)}.btn:active{transform:scale(.99)}.btn:focus-visible,input:focus-visible{outline:3px solid #00b8d9;outline-offset:3px}.btn.secondary{background:#edf3ff;color:#2451a6;box-shadow:none}.btn.danger{background:#1769ff;color:#fff;box-shadow:none}
+.hidden{display:none}.section-title{display:flex;gap:12px;align-items:center}.section-title .num{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#eaf1ff;color:#1769ff;font-weight:900}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.field label{display:block;font-size:12px;font-weight:800;color:#53627a;margin-bottom:6px}.field input{width:100%;padding:13px;border:1px solid #cfd9e8;border-radius:12px;font-size:16px;background:#fff}.question{font-size:18px;font-weight:800;line-height:1.4;margin:0 0 15px}.option{display:flex;align-items:center;gap:10px;border:2px solid #e1e8f2;border-radius:15px;padding:14px;margin:9px 0;cursor:pointer;transition:.15s;background:#fff}.option:hover{border-color:#9dbbff;background:#f7faff}.option.selected{border-color:#1769ff;background:#eef5ff}.option input{transform:scale(1.2);accent-color:#1769ff}.option .text{flex:1}.points{font-size:12px;font-weight:800;color:#68758a;background:#f1f4f8;padding:5px 8px;border-radius:999px}.progress-wrap{margin-top:20px}.progress-label{display:flex;justify-content:space-between;font-size:12px;font-weight:800;margin-bottom:7px}.progress{height:9px;background:#ffffff2b;border-radius:99px;overflow:hidden}.bar{height:100%;width:0;background:#fff;border-radius:99px;transition:.25s}
+.result{text-align:center;padding:30px}.score{font-size:64px;font-weight:900;color:#1769ff;line-height:1}.result .level{display:inline-block;margin:12px 0;padding:9px 17px;border-radius:999px;background:#eef4ff;color:#2355bd;font-weight:900}.result p{color:var(--muted);line-height:1.5}.result .note{font-size:12px}.dashboard h2{margin:0}.dashboard-sub{color:var(--muted);margin-top:5px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}.stat{border:1px solid var(--line);border-radius:17px;padding:15px;background:#fbfdff}.stat b{font-size:25px;display:block}.stat span{font-size:12px;color:var(--muted)}.chart{display:grid;gap:15px;margin:22px 0}.row{display:grid;grid-template-columns:125px 1fr 44px;align-items:center;gap:10px}.track{height:30px;background:#edf2f7;border-radius:10px;overflow:hidden}.fill{height:100%;border-radius:10px;transition:width .5s ease}.low{background:#36a269}.moderate{background:#e6b13c}.high{background:#f07c43}.veryhigh{background:#d34f69}.legend{font-size:12px;color:var(--muted)}.footer{text-align:center;color:#718096;font-size:12px;padding:8px 0 25px}.error{color:#b42318;font-weight:800;margin:8px 0}
+@supports(padding:max(0px)){.app{padding-left:max(10px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right));padding-bottom:max(10px,env(safe-area-inset-bottom))}}
+@media(max-width:650px){.app{padding:10px}.hero{padding:25px 20px;border-radius:23px}.card{padding:17px;border-radius:18px}.grid{grid-template-columns:1fr}.row{grid-template-columns:86px 1fr 30px;font-size:12px}.stats{grid-template-columns:1fr 1fr}.top{padding:0 4px}}
+</style>
+</head>
+<body>
+<main class="app"><div class="wrap">
+<div class="top"><div class="brand">🔬 FEIRA DE CIÊNCIAS</div><div class="badge-fair">Projeto escolar • IA</div></div>
+<section class="hero"><div class="eyebrow">Pesquisa interativa</div><h1>A Socialização na Era da IA</h1><p>Descubra como a Inteligência Artificial aparece na rotina e nas relações de ajuda, estudo e comunicação.</p><div class="goal">🎯 Objetivo: verificar a frequência de uso da IA e identificar a faixa de dependência indicada pelas respostas.</div><div class="progress-wrap"><div class="progress-label"><span id="counter">0 de 10 questões respondidas</span><span id="percent">0%</span></div><div class="progress"><div class="bar" id="bar"></div></div></div></section>
+<section id="welcome" class="card welcome"><div class="icon">🤖</div><h2>Participe da pesquisa!</h2><p>Responda às 10 perguntas. Cada resposta vale de 0 a 3 pontos. No final, você verá seu resultado e poderá contribuir para o gráfico geral da nossa feira.</p><button class="btn" id="start" type="button">COMEÇAR O TESTE →</button></section>
+<form id="quiz" class="hidden">
+<section class="card"><div class="section-title"><div class="num">1</div><div><h2 style="margin:0">Identificação</h2><small style="color:#64748b">Opcional — não interfere na pontuação.</small></div></div><div class="grid" style="margin-top:16px"><div class="field"><label>Nome</label><input id="nome" placeholder="Seu nome"></div><div class="field"><label>Idade</label><input id="idade" type="number" min="1" max="120" placeholder="Sua idade"></div><div class="field"><label>Turma</label><input id="turma" placeholder="Sua turma"></div><div class="field"><label>Data</label><input id="data" type="date"></div></div></section>
+<div id="questions"></div>
+<section class="card"><p style="color:#64748b;font-size:13px;line-height:1.5">Ao finalizar, o aplicativo soma automaticamente os pontos. O resultado é educativo e representa apenas as respostas dadas neste questionário.</p><div id="err" class="error"></div><button class="btn" type="submit">✨ VER MEU RESULTADO</button></section>
+</form>
+<section id="result" class="card result hidden"><div>Seu resultado foi</div><div class="score" id="score">0 / 30</div><div class="level" id="level"></div><p id="desc"></p><p class="note">Este resultado não é diagnóstico. Ele corresponde à pontuação deste questionário.</p><button class="btn" id="again" type="button">↻ PRÓXIMO VISITANTE</button></section>
+<section id="dashboard" class="card dashboard"><div class="section-title"><div class="num">📊</div><div><h2>Painel da Feira</h2><div class="dashboard-sub">Resultados acumulados dos visitantes neste dispositivo.</div></div></div><div class="stats"><div class="stat"><b id="totalVisitors">0</b><span>visitantes</span></div><div class="stat"><b id="avgScore">—</b><span>pontuação média</span></div></div><div class="chart" id="chart"></div><div class="legend" id="legend">Faça o primeiro teste para começar o gráfico.</div><div style="margin-top:18px"><button class="btn danger" id="clearData" type="button">Zerar resultados da feira</button></div></section>
+<div class="footer">Projeto “A Socialização na Era da IA” • Pesquisa escolar</div>
+</div></main>
+<script>
+'use strict';
+const qs = [
+ ['Com que frequência você utiliza Inteligência Artificial?',['Nunca','Às vezes','Frequentemente','Todos os dias']],
+ ['Você utiliza IA para realizar atividades escolares?',['Nunca','Às vezes','Frequentemente','Sempre']],
+ ['Quando tem uma dúvida, você consulta a IA antes de tentar descobrir a resposta sozinho?',['Nunca','Às vezes','Frequentemente','Sempre']],
+ ['Você utiliza IA para escrever trabalhos, textos ou responder perguntas?',['Nunca','Às vezes','Frequentemente','Sempre']],
+ ['Você sente dificuldade para realizar algumas atividades quando não pode utilizar a IA?',['Não','Pouca dificuldade','Muita dificuldade','Sim, tenho muita dificuldade']],
+ ['Quando precisa de ajuda, você prefere consultar a IA em vez de perguntar para outra pessoa?',['Nunca','Às vezes','Frequentemente','Sempre']],
+ ['Você acha que o uso da IA diminui seu interesse em conversar ou pedir ajuda para outras pessoas?',['Não','Pouco','Às vezes','Sim']],
+ ['Se você ficasse uma semana sem utilizar IA, teria dificuldade?',['Não teria dificuldade','Teria pouca dificuldade','Teria alguma dificuldade','Teria muita dificuldade']],
+ ['Você conseguiria estudar e realizar suas atividades normalmente sem utilizar IA?',['Sim, tranquilamente','Sim, com pouca dificuldade','Teria alguma dificuldade','Teria muita dificuldade']],
+ ['Você considera a Inteligência Artificial importante para realizar suas atividades do dia a dia?',['Não é importante','É pouco importante','É importante','É muito importante']]
+];
+const $ = id => document.getElementById(id);
+const key = 'socializacaoIAResultadosV2';
+let memoryResults = {scores:[], levels:{BAIXO:0, MODERADO:0, ALTO:0, 'MUITO ALTO':0}};
+let storageAvailable = false;
+try {
+  const testKey = '__ia_storage_test__';
+  window.localStorage.setItem(testKey, '1');
+  window.localStorage.removeItem(testKey);
+  storageAvailable = true;
+} catch (err) { storageAvailable = false; }
+function emptyResults(){return {scores:[], levels:{BAIXO:0, MODERADO:0, ALTO:0, 'MUITO ALTO':0}};}
+function getResults(){
+  if (!storageAvailable) return memoryResults;
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(key) || 'null');
+    if (saved && Array.isArray(saved.scores) && saved.levels) return saved;
+  } catch (err) { storageAvailable = false; }
+  return emptyResults();
+}
+function storeResults(data){
+  memoryResults = data;
+  if (storageAvailable) {
+    try { window.localStorage.setItem(key, JSON.stringify(data)); }
+    catch (err) { storageAvailable = false; }
+  }
+}
+const questionBox = $('questions');
+qs.forEach((q,i)=>{
+  const section = document.createElement('section');
+  section.className = 'card';
+  const title = document.createElement('div');
+  title.className = 'section-title';
+  const num = document.createElement('div');
+  num.className = 'num'; num.textContent = String(i+1);
+  const textWrap = document.createElement('div');
+  const question = document.createElement('p'); question.className = 'question'; question.textContent = q[0];
+  textWrap.appendChild(question); title.append(num,textWrap); section.appendChild(title);
+  q[1].forEach((answer,j)=>{
+    const label = document.createElement('label'); label.className = 'option';
+    const radio = document.createElement('input'); radio.type = 'radio'; radio.required = true; radio.name = 'q'+i; radio.value = String(j);
+    const answerText = document.createElement('span'); answerText.className = 'text'; answerText.textContent = answer;
+    const points = document.createElement('span'); points.className = 'points'; points.textContent = j + (j===1 ? ' ponto' : ' pontos');
+    label.append(radio,answerText,points); section.appendChild(label);
+  });
+  questionBox.appendChild(section);
+});
+function updateProgress(){
+  const answered = qs.reduce((count,_,i)=>count + (document.querySelector('input[name="q'+i+'"]:checked') ? 1 : 0),0);
+  $('counter').textContent = answered + ' de 10 questões respondidas';
+  $('percent').textContent = (answered*10) + '%';
+  $('bar').style.width = (answered*10) + '%';
+}
+document.addEventListener('click', event=>{
+  const option = event.target && event.target.closest ? event.target.closest('.option') : null;
+  if (option) { const radio = option.querySelector('input[type="radio"]'); if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change', {bubbles:true})); } }
+});
+document.addEventListener('change', event=>{
+  if (event.target && event.target.matches('input[type="radio"]')) {
+    document.querySelectorAll('input[type="radio"]').forEach(radio=>radio.closest('.option').classList.toggle('selected', radio.checked));
+    updateProgress();
+  }
+});
+function renderResults(){
+  const results = getResults();
+  const labels = [['BAIXO','low'],['MODERADO','moderate'],['ALTO','high'],['MUITO ALTO','veryhigh']];
+  const total = results.scores.length;
+  $('totalVisitors').textContent = String(total);
+  $('avgScore').textContent = total ? (results.scores.reduce((a,b)=>a+b,0)/total).toFixed(1) : '—';
+  $('chart').innerHTML = labels.map(([name,cls])=>{
+    const count = Number(results.levels[name] || 0);
+    const percent = total ? Math.round(count/total*100) : 0;
+    return '<div class="row"><strong>'+name+'</strong><div class="track"><div class="fill '+cls+'" style="width:'+percent+'%"></div></div><span>'+count+'</span></div>';
+  }).join('');
+  $('legend').textContent = total
+    ? 'As barras mostram a quantidade de visitantes em cada faixa; o percentual é calculado sobre todos os testes concluídos.'
+    : 'Faça o primeiro teste para começar o gráfico.';
+  if (!storageAvailable) $('legend').textContent += ' Observação: este navegador não permitiu salvar os dados permanentemente; mantenha esta página aberta.';
+}
+function goTop(){try{window.scrollTo({top:0,behavior:'smooth'});}catch(err){window.scrollTo(0,0);}}
+function iniciarPesquisaFeira(){
+  $('welcome').classList.add('hidden'); $('quiz').classList.remove('hidden'); $('data').value=''; $('err').textContent=''; goTop();
+}
+window.iniciarPesquisaFeira = iniciarPesquisaFeira;
+$('start').addEventListener('click', iniciarPesquisaFeira);
+$('start').addEventListener('touchend', function(event){ event.preventDefault(); iniciarPesquisaFeira(); }, {passive:false});
+$('quiz').addEventListener('submit',event=>{
+  event.preventDefault();
+  const answers = qs.map((_,i)=>document.querySelector('input[name="q'+i+'"]:checked'));
+  if (answers.some(answer=>!answer)) {
+    $('err').textContent = 'Responda às 10 perguntas antes de ver o resultado.';
+    const missing = answers.findIndex(answer=>!answer);
+    const firstMissing = document.querySelector('input[name="q'+missing+'"]').closest('.card');
+    if (firstMissing) firstMissing.scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+  $('err').textContent='';
+  const score = answers.reduce((sum,answer)=>sum+Number(answer.value),0);
+  let level, description;
+  if(score<=7){level='BAIXO';description='O uso da IA aparece pouco nas situações avaliadas pelo questionário.';}
+  else if(score<=15){level='MODERADO';description='A IA está presente em algumas situações da rotina, mas não aparece de forma muito intensa.';}
+  else if(score<=23){level='ALTO';description='A IA está bastante presente na rotina e o participante relata maior dificuldade em algumas situações sem utilizá-la.';}
+  else{level='MUITO ALTO';description='A IA aparece com muita frequência nas situações avaliadas, e o participante relata maior dificuldade quando não pode utilizá-la.';}
+  const results = getResults(); results.scores.push(score); results.levels[level] = Number(results.levels[level]||0)+1;
+  storeResults(results); renderResults();
+  $('score').textContent = score + ' / 30'; $('level').textContent = level; $('desc').textContent = description;
+  $('quiz').classList.add('hidden'); $('result').classList.remove('hidden'); goTop();
+});
+$('again').addEventListener('click',()=>{
+  $('quiz').reset();
+  document.querySelectorAll('.option.selected').forEach(label=>label.classList.remove('selected'));
+  $('result').classList.add('hidden'); $('welcome').classList.remove('hidden'); $('err').textContent=''; updateProgress(); goTop();
+});
+$('clearData').addEventListener('click',()=>{
+  if(window.confirm('Zerar todos os resultados acumulados neste dispositivo?')){
+    storeResults(emptyResults());
+    if(storageAvailable){try{window.localStorage.removeItem(key);}catch(err){storageAvailable=false;}}
+    renderResults();
+  }
+});
+renderResults(); updateProgress();
+window.addEventListener('error', function(){
+  var e = document.getElementById('err');
+  if (e) e.textContent = 'O navegador encontrou um erro ao executar a pesquisa. Abra este arquivo diretamente no Google Chrome ou use a versão hospedada na internet.';
+});
+</script></body></html>
